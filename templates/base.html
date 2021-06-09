@@ -15,6 +15,36 @@
 </head>
 
 <body>
+    <header>
+        <!-- Top nav bar-->
+        <nav class="nav-extended text-shadow deep-purple darken-4">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_tasks') }}" class="brand-logo">Task Manager</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_tasks') }}">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">New Task</a></li>
+                    <li><a href="#">Manage Categories</a></li>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- mobile sidenavbar -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><h4 class="center-align deep-purple-text text-darken-4">Task Manager</h4></li>
+            <li><a href="{{ url_for('get_tasks') }}">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">New Task</a></li>
+            <li><a href="#">Manage Categories</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </header>
+
     {% block content%}
     {% endblock %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
